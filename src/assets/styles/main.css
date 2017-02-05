@@ -1,6 +1,8 @@
 @import 'fonts.css';
 @import 'partials/sections/header.css';
+@import 'partials/sections/article.css';
 @import 'partials/sections/furniture.css';
+@import 'partials/sections/decor.css';
 
 html {
 	font-family: 'Proxima Nova', Arial, sans-serif;
