@@ -1,5 +1,6 @@
 @import 'fonts.css';
 @import 'partials/sections/header.css';
+@import 'partials/sections/furniture.css';
 
 html {
 	font-family: 'Proxima Nova', Arial, sans-serif;
@@ -12,6 +13,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+	counter-reset: blocks;
 }
 
 article,
@@ -30,6 +32,10 @@ a:hover {
   outline-width: 0;
 }
 
+figure {
+	margin: 0;
+}
+
 ul, li {
 	margin: 0;
 	padding: 0;
@@ -37,6 +43,15 @@ ul, li {
 
 p { 
     font-size: 0.9375rem;
+    font-style: normal;
     color: #464646;
 }
 
+main {
+}
+
+.main-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	z-index: -996;
+}

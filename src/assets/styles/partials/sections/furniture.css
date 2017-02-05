@@ -1,0 +1,168 @@
+article:first-child {
+	padding-top: 170px;
+}
+
+article {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+
+.furniture {
+	width: 350px;
+	align-self: center;
+	padding: 0 40px;
+}
+
+section .h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	position: relative;
+}
+
+section .h2::before {
+	outline: 1px solid #000;
+	position: absolute;
+	top: -45px;
+	left: -100px;
+	content: "";
+	height: 152px;
+	transform: rotate(90deg);
+}
+
+.content {
+	line-height: 1.5rem;
+	font-style: normal;
+	position: relative;
+}
+
+.content::before {
+	outline: 3px solid #bea67c;
+	position: absolute;
+	top: -10px;
+	left: -49px;
+	content: "";
+	height: 45px;
+	transform: rotate(90deg);	
+}
+
+.learn-more-btn {
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	letter-spacing: 0.2rem;
+	position: relative;
+	display: inline-block;
+}
+
+.learn-more-btn::after {
+	outline: 2px solid #bea67c;
+	position: absolute;
+	top: 8px;
+	left: 23px;
+	content: "";
+	height: 44px;
+	transform: rotate(90deg);	
+}
+
+.arror-small {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	left: 3px;
+	width: 1em;
+	height: 1em;
+}
+
+.arror-small::before, .arror-small::after {
+	content: "";
+	position: absolute;
+	border-width: .1em;
+	border-color: #000;
+}
+
+.arror-small::after {
+	width: .3em;
+	height: .3em;
+	top: .36em;
+	left: 2em;
+	border-top-style: solid;
+	border-right-style: solid;
+	transform: rotate(45deg);
+}
+
+.arror-small::before {
+	top: .5em;
+	width: 2.4em;
+	border-top-style: solid;
+}
+
+.img {
+	overflow: hidden;
+	width: 615px;
+	height: 400px;
+	background-color: #000;
+}
+
+.img::after{
+	outline: 3px solid #bea67c;
+	position: absolute;
+	content: "";	
+	top: 20px;
+	right: 0;
+	height: 45px;
+}
+
+.furniture-img {
+	width: 100%;
+	height: 400px;
+	background-image: url(../img/wood/furniture.jpg);
+	background-size: 145% 115%;
+	background-position: 100% 10%;
+	opacity: 0.9;
+	position: relative;
+}
+
+.furniture-img::after {
+	content: "";
+	background: #000 url(../img/wood/furniture.jpg);
+	background-size: 145% 115%;
+	background-position: 100% 10%;
+	height: 400px;
+	width: 615px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	filter: grayscale(100%); 
+	opacity: 0.35;
+	z-index: 100;
+}
+
+article::before {
+	counter-increment: blocks;
+	content: "0" counter(blocks);
+	font-size: 2.25rem;
+	position: absolute;
+	letter-spacing: 0.2rem;
+	bottom: -10px;
+	left: 25px;
+}
+
+article::after {
+	counter-increment: blocks;
+	content: ".";
+	font-size: 2.25rem;
+	position: absolute;
+	color: #bea67c;
+	bottom: -10px;
+	left: 65px;
+}
+
+/*article::after {
+	outline: 3px solid #bea67c;
+	position: absolute;
+	content: "";	
+	top: -10px;
+	left: -49px;
+	height: 45px;
+ }*/

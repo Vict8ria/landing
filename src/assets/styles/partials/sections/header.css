@@ -21,7 +21,7 @@ header {
 
 .header-bg-left::after {
 	content: "";
-	background-image: url(../img/header/wood_2.png);
+	background-image: url(../img/wood/wood_2.png);
 	height: 1000px;
 	background-size: 115%;
 	width: 100%;
@@ -44,7 +44,7 @@ header {
 
 .header-bg-right::after {
 	content: "";
-	background: #000 url(../img/header/wood.png);
+	background: #000 url(../img/wood/wood.png);
 	height: 1042px;
 	width: 100%;
 	opacity: 0.1;
@@ -59,7 +59,7 @@ header {
 	position: absolute;
 	top: 210px;
 	left: 250px;
-	background-image: url(../img/header/header-buttons.png);
+	background-image: url(../img/icons/header-buttons.png);
 	width: 36px;
 	height: 370px;
 }
@@ -72,8 +72,10 @@ header::before {
 	position: absolute;
 	top: 820px;
 	opacity: 0.4;
-	left: 220px;
+	left: 222px;
 	z-index: -998;
+	height: 180px;
+	overflow: hidden;
 }
 
 header::after {
@@ -143,11 +145,6 @@ header::after {
 	display: block;
 }
 
-/*.info-lang {
-	color: #fff;
-	margin-right: 30px;
-}*/
-
 .lang {
 	color: #fff;
 	margin-right: 30px;
@@ -183,10 +180,11 @@ header::after {
 	color: #fff;
 	content: "i";
 	position: absolute;
+	font-family: 'Arial' , sans-serif;
 	top: -1px;
 	right: 9px;
 	font-size: 1.4rem;
-	font-style: 400;
+	font-style: 300;
 }
 
 .promo {
@@ -221,7 +219,7 @@ header::after {
 	margin-top: 60px;
 	width: 20px;
 	height: 30px;
-	background-image: url(../img/header/mouse.png);
+	background-image: url(../img/icons/mouse.png);
 }
 
 .scroll::before {
