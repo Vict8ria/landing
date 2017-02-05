@@ -1,0 +1,42 @@
+@import 'fonts.css';
+@import 'partials/sections/header.css';
+
+html {
+	font-family: 'Proxima Nova', Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	overflow-x: hidden;
+	background-color: #ffffff;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+article,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+{
+  display: block;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+p { 
+    font-size: 0.9375rem;
+    color: #464646;
+}
+

@@ -15,6 +15,7 @@ var config = {
     jade: './src/**/index.jade',
     js: './src/assets/js/*.js',
     images: './src/assets/img/**',
+    fonts: 'src/assets/fonts/**',
     html: "./*.html",
     dist: "./public"
 };
@@ -52,6 +53,12 @@ gulp.task('images', function() {
     .pipe(gulp.dest(config.dist + '/assets/img'));
 });
 
+gulp.task('fonts', function() {
+    return gulp.src(config.fonts)
+        .pipe(gulp.dest(config.dist + '/assets/fonts'))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('js', function() {
     return gulp.src(config.js)
         .pipe(gulp.dest(config.dist + '/assets/js'))
@@ -72,6 +79,9 @@ gulp.task('default', function() {
     });
     gulp.watch(config.images, function(event) {
         gulp.run('images');
+    });
+        gulp.watch(config.fonts, function(event) {
+        gulp.run('fonts');
     });
     gulp.watch(config.html).on('change', browserSync.reload);
 });

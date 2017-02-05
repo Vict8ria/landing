@@ -1,0 +1,269 @@
+header {
+	height: 1000px;
+	overflow: hidden;
+}
+
+.header-wrapper {
+	min-width: 66%;
+	margin-left: 34%;
+}
+
+.header-bg-left {
+	background-color: #000000;
+	height: 1000px;
+	width: 55%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -999;
+
+}
+
+.header-bg-left::after {
+	content: "";
+	background-image: url(../img/header/wood_2.png);
+	height: 1000px;
+	background-size: 115%;
+	width: 100%;
+	position: absolute;
+	opacity: 0.1;
+	top: 0;
+	left: 0;
+	z-index: -998;
+}
+
+.header-bg-right {
+	background-color: #000000;
+	height: 1042px;
+	width: 45%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -994;
+}
+
+.header-bg-right::after {
+	content: "";
+	background: #000 url(../img/header/wood.png);
+	height: 1042px;
+	width: 100%;
+	opacity: 0.1;
+	background-size: 200%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -993;
+}
+
+.section-number {
+	position: absolute;
+	top: 210px;
+	left: 250px;
+	background-image: url(../img/header/header-buttons.png);
+	width: 36px;
+	height: 370px;
+}
+
+header::before {
+	content: "5";
+	text-transform: uppercase;
+	color: #a9946e;
+	font-size: 24.72rem;
+	position: absolute;
+	top: 820px;
+	opacity: 0.4;
+	left: 220px;
+	z-index: -998;
+}
+
+header::after {
+	content: "w";
+	text-transform: uppercase;
+	color: #a9946e;
+	font-size: 24.72rem;
+	position: absolute;
+	top: 187px;
+	opacity: 0.4;
+	right: -200px;
+	z-index: 10000;
+}
+
+.header::after {
+	content: "furniture  &  decor";
+	text-transform: uppercase;
+	position: absolute;
+	top: 353px;
+	right: 150px;
+	color: #a9946e;
+	opacity: 0.2;
+	transform: rotate(90deg);
+}
+
+.header-top {
+	top: 0;
+	margin: 15px auto 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	position: relative;
+	margin-right: 40px;
+}
+
+.logo a {
+	text-transform: uppercase;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 2.25rem;
+	letter-spacing: 0.6rem;
+}
+
+.logo:before {
+	content: "";
+	position: absolute;
+	top: 21px;
+	left: 47px; 
+	outline: 3px solid #bea67c;
+	width: 55px;
+}
+
+.nav-item {
+	display: inline-block;
+	margin-right: 120px;
+}
+
+
+.nav-link {
+	color: #818181;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 0.9375rem;
+	display: block;
+}
+
+/*.info-lang {
+	color: #fff;
+	margin-right: 30px;
+}*/
+
+.lang {
+	color: #fff;
+	margin-right: 30px;
+	text-transform: uppercase;
+	font-size: 0.9375rem;
+	opacity: 0.5;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: center;
+}
+
+.lang::after {
+	content: "";
+	position: relative;
+	border: 3px solid transparent;
+	border-top: 5px solid #818181;
+	top: 12px;
+	left: 5px;
+	width: 0;
+	height: 0;
+}
+
+.info {
+	border: 1px solid #fff;
+	border-radius: 50px;
+	width: 23px;
+	height: 23px;
+	position: relative;
+	opacity: 0.5;
+}
+
+.info::after {
+	color: #fff;
+	content: "i";
+	position: absolute;
+	top: -1px;
+	right: 9px;
+	font-size: 1.4rem;
+	font-style: 400;
+}
+
+.promo {
+	margin-top: 200px;
+}
+
+.promo p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #bea67c;
+	text-transform: uppercase;
+	font-size: 6.25rem;
+	letter-spacing: 1.1rem;
+}
+
+.learn-more {
+	border: 2px solid #ffffff;
+	padding: 15px 70px;
+	text-transform: uppercase;
+	position: relative;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.scroll {
+	position: relative;
+}
+
+.mouse {
+	margin-top: 60px;
+	width: 20px;
+	height: 30px;
+	background-image: url(../img/header/mouse.png);
+}
+
+.scroll::before {
+	position: absolute;
+	top: 200px;
+	left: -16px;
+	content: "scroll";
+	font-size: 0.875em;
+	transform: rotate(90deg);
+	color: #ffffff;
+	opacity: 0.1;
+	text-transform: uppercase;
+}
+
+.arrow {
+	position: relative;
+	top: 40px;
+	left: 3px;
+	width: 1em;
+	height: 1em;
+	transform: rotate(90deg);
+}
+
+.arrow::before, .arrow::after {
+	content: "";
+	position: absolute;
+	border-width: .2em;
+	border-color: #ffffff;
+}
+
+.arrow::after {
+	width: .7em;
+	height: .7em;
+	top: .15em;
+	left: 3.9em;
+	border-top-style: solid;
+	border-right-style: solid;
+	transform: rotate(45deg);
+}
+
+.arrow::before {
+	top: .5em;
+	width: 4.75em;
+	border-top-style: solid;
+}
