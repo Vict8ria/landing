@@ -1,8 +1,12 @@
 @import 'fonts.css';
+@import 'partials/sections/arror-small.css';
 @import 'partials/sections/header.css';
 @import 'partials/sections/article.css';
 @import 'partials/sections/furniture.css';
 @import 'partials/sections/decor.css';
+@import 'partials/sections/video.css';
+@import 'partials/sections/watch-video.css';
+
 
 html {
 	font-family: 'Proxima Nova', Arial, sans-serif;

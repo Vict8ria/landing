@@ -1,0 +1,135 @@
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.video-set__header {
+	width: 600px;
+	margin: 0 auto;
+	position: relative;
+	right: 0;
+	padding-top: 200px;
+}
+
+.video-set__header::after {
+	outline: 3px solid #bea67c;
+	position: absolute;
+	content: "";	
+	top: 20px;
+	height: 45px;
+	right: -300px;
+}
+
+.video-set .h2 {
+	text-align: center;
+	font-size: 3rem;
+	text-transform: uppercase;
+	position: relative;
+	letter-spacing: 0.1rem;
+}
+
+.video-set .h2::after {
+	position: absolute;
+	content: "";
+	top: 80px;
+	border-bottom: 4px solid #bea67c;
+	width: 4%;
+	left: 47%;
+}
+
+.video-set__content {
+	text-align: center;
+	line-height: 1.5rem;
+}
+
+.video-set__items {
+	display: flex;
+	justify-content: center;
+	margin: 90px 0 90px;
+	position: relative;
+}
+
+.video-set__item {
+	cursor: pointer;
+	margin: 0 55px;
+}
+
+.video-set__item::before {
+	position: absolute;
+	top: 88px;
+	margin-left: 88px;
+	content: "";
+	width: 68px;
+	height: 68px;
+	background-color: #baa785;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.video-set__item::after {
+	position: absolute;
+	top: 110px;
+	margin-left: 114px;
+	content: "";
+	z-index: 2;
+	width: 0;
+	height: 0;
+	opacity: 1;
+	border-style: solid;
+	border-width: 12px 0 12px 24px;
+	border-color: transparent transparent transparent #fff;
+
+}
+
+.round {
+	width: 245px;
+	height: 245px;
+	border-radius: 50%;
+	position: relative;
+
+}
+
+.round::before {
+	position: absolute;
+	content: "";
+	width: 275px;
+	height: 275px;
+	border-radius: 50%;
+	top: -15px;
+	left: -15px;
+	border: 1px solid #e4e4e4;
+
+}
+
+.round::after {
+	position: absolute;
+	content: "";
+	top: 280px;
+	border-bottom: 2px solid #bea67c;
+	width: 12%;
+	left: 44%;
+}
+
+.video-1 {
+	background: url(../img/wood/table.jpg);
+	background-size: cover;
+	background-position: 40% 50%;
+}
+
+.video-2 {
+	background: url(../img/wood/chair.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.video-3 {
+	background: url(../img/wood/table-2.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.video-set__item p {
+	text-align: center;
+	margin-top: 50px;
+	text-transform: capitalize;
+}

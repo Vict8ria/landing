@@ -11,6 +11,10 @@ article:nth-child(even)::after {
 	right: 18px;
 }
 
+article .arror-small::before, .arror-small::after {
+	border-color: #000;
+}
+
 .row {
 	display: flex;
 	justify-content: flex-end;
@@ -27,13 +31,14 @@ article:nth-child(even)::after {
 	position: relative;
 }
 
-.h2 {
+article .h2 {
 	font-size: 3rem;
 	text-transform: uppercase;
 	position: relative;
+	letter-spacing: 0.1rem;
 }
 
-.h2::before {
+article .h2::before {
 	outline: 1px solid #000;
 	position: absolute;
 	top: -45px;
@@ -50,6 +55,7 @@ article:nth-child(even)::after {
 	line-height: 1.5rem;
 	font-style: normal;
 	position: relative;
+	line-height: 1.5rem;
 }
 
 .row-rev .content {
@@ -88,38 +94,6 @@ article:nth-child(even)::after {
 	transform: rotate(90deg);	
 }
 
-.arror-small {
-	display: inline-block;
-	position: relative;
-	top: 2px;
-	left: 3px;
-	width: 3em;
-	height: 1em;
-}
-
-.arror-small::before, .arror-small::after {
-	content: "";
-	position: absolute;
-	border-width: .1em;
-	border-color: #000;
-}
-
-.arror-small::after {
-	width: .3em;
-	height: .3em;
-	top: .36em;
-	left: 2em;
-	border-top-style: solid;
-	border-right-style: solid;
-	transform: rotate(45deg);
-}
-
-.arror-small::before {
-	top: .5em;
-	width: 2.4em;
-	border-top-style: solid;
-}
-
 .img {
 	overflow: hidden;
 	width: 615px;
@@ -139,16 +113,16 @@ article:nth-child(even)::after {
 	left: 0;
 }
 
+.row .img::after {
+	right: 0;
+}
+
 .row .h2::before {
 	left: -100px;
 }
 
 .row .content::before {
 	left: -49px;	
-}
-
-.row .img::after {
-	right: 0;
 }
 
 article::before {

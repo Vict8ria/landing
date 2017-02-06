@@ -199,7 +199,7 @@ header::after {
 	letter-spacing: 1.1rem;
 }
 
-.learn-more {
+.btn-white {
 	border: 2px solid #ffffff;
 	padding: 15px 70px;
 	text-transform: uppercase;
@@ -208,6 +208,15 @@ header::after {
 	display: inline-block;
 	font-size: 0.875rem;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.arror-small::before, .arror-small::after {
+	border-color: #000;
+}
+
+.arror-small__header {
+	margin-left: 5px;
 }
 
 .scroll {
