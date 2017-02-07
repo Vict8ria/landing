@@ -1,11 +1,14 @@
 @import 'fonts.css';
-@import 'partials/sections/arror-small.css';
+@import 'partials/vendors/normalize.css';
+@import 'partials/sections/arrow-small.css';
 @import 'partials/sections/header.css';
 @import 'partials/sections/article.css';
 @import 'partials/sections/furniture.css';
 @import 'partials/sections/decor.css';
 @import 'partials/sections/video.css';
 @import 'partials/sections/watch-video.css';
+@import 'partials/sections/about-us.css';
+@import 'partials/sections/footer.css';
 
 
 html {
@@ -22,22 +25,6 @@ body {
 	counter-reset: blocks;
 }
 
-article,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-{
-  display: block;
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
 figure {
 	margin: 0;
 }
@@ -49,15 +36,13 @@ ul, li {
 
 p { 
     font-size: 0.9375rem;
-    font-style: normal;
     color: #464646;
+    font-weight: 400;
 }
 
-main {
-}
-
-.main-wrapper {
+.wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
 	z-index: -996;
 }
+

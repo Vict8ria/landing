@@ -1,5 +1,6 @@
 .furniture {
-	width: 350px;
+	max-width: 350px;
+	margin-top: -30px;
 	align-self: center;
 	padding: 0 40px;
 	position: relative;

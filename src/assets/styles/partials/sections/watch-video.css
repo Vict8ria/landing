@@ -1,7 +1,7 @@
 .watch-video {
 	border: 1px solid #000;
 	background-color: #000;
-	margin: 55px 0;
+	margin-top: 55px;
 	position: relative;
 	z-index: -2;
 }
@@ -106,7 +106,8 @@
 }
 
 .btn__watch-video {
-	padding-left: 75px;
+	padding-left: 82px;
+	padding-right: 58px;
 }
 
 .btn__watch-video::before {
@@ -115,7 +116,7 @@
 	width: 18px;
 	height: 18px;
 	top: 12px;
-	left: 40px;
+	left: 46px;
 	border: 2px solid #fff;
 	border-radius: 50% 50%;
 }
@@ -123,7 +124,7 @@
 .btn__watch-video::after {
 	position: absolute;
 	top: 20px;
-	left: 49px;
+	left: 55px;
 	content: "";
 	width: 0;
 	height: 0;

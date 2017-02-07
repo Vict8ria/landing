@@ -1,8 +1,3 @@
-article {
-	padding-top: 200px;
-	margin-bottom: 100px;
-}
-
 article:nth-child(even)::before {
 	right: 25px;
 }
@@ -15,11 +10,13 @@ article .arror-small::before, .arror-small::after {
 	border-color: #000;
 }
 
-.row {
+.row-end {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	position: relative;
+	padding-top: 200px;
+	margin-bottom: 100px;
 }
 
 
@@ -29,6 +26,16 @@ article .arror-small::before, .arror-small::after {
 	justify-content: flex-end;
 	align-items: center;
 	position: relative;
+	padding-top: 200px;
+	margin-bottom: 100px;
+}
+
+.row-start {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: 150px 0;
 }
 
 article .h2 {
@@ -51,11 +58,13 @@ article .h2::before {
 	right: -100px;
 }
 
+.row-end .h2::before, .row-start .h2::before {
+	left: -100px;
+}
+
 .content {
 	line-height: 1.5rem;
-	font-style: normal;
 	position: relative;
-	line-height: 1.5rem;
 }
 
 .row-rev .content {
@@ -73,6 +82,10 @@ article .h2::before {
 
 .row-rev .content::before{
 	right: -49px;
+}
+
+.row-end .content::before{
+	left: -49px;
 }
 
 .learn-more-btn {
@@ -101,7 +114,7 @@ article .h2::before {
 	background-color: #000;
 }
 
-.img::after {
+.row-rev .img::after, .row-end .img::after {
 	outline: 3px solid #bea67c;
 	position: absolute;
 	content: "";	
@@ -113,19 +126,15 @@ article .h2::before {
 	left: 0;
 }
 
-.row .img::after {
+.row-end .img::after {
 	right: 0;
 }
 
-.row .h2::before {
-	left: -100px;
-}
-
-.row .content::before {
+.row-end, .row-start .content::before {
 	left: -49px;	
 }
 
-article::before {
+.steps::before {
 	counter-increment: blocks;
 	content: "0" counter(blocks);
 	font-size: 2.25rem;
@@ -134,11 +143,11 @@ article::before {
 	bottom: -10px;
 }
 
-article:nth-child(odd)::before {
+.steps:nth-child(odd)::before {
 	left: 25px;
 }
 
-article::after {
+.steps::after {
 	content: ".";
 	font-size: 2.25rem;
 	position: absolute;
@@ -146,6 +155,6 @@ article::after {
 	bottom: -10px;
 }
 
-article:nth-child(odd)::after {
+.steps:nth-child(odd)::after {
 	left: 65px;
 }
