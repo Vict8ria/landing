@@ -1,5 +1,6 @@
 @import 'fonts.css';
 @import 'partials/vendors/normalize.css';
+@import 'partials/sections/menu.css';
 @import 'partials/sections/arrow-small.css';
 @import 'partials/sections/header.css';
 @import 'partials/sections/article.css';
@@ -46,3 +47,14 @@ p {
 	z-index: -996;
 }
 
+@media only screen and (max-width: 1200px) {
+	.wrapper {padding: 30px;}
+}
+
+@media only screen and (max-width: 720px) {
+	
+}
+
+@media only screen and (max-width: 480px) {
+	.wrapper {padding: 30px;}
+}

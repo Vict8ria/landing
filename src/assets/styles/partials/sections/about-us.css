@@ -1,5 +1,5 @@
 .about-us {
-	width: 450px;
+	max-width: 450px;
 	margin: -20px 0 0 40px;
 	z-index: 1;
 }
@@ -18,7 +18,7 @@
 }
 
 .row-start .img {
-	width: 590px;
+	max-width: 590px;
 	margin: 0 auto;
 }
 
@@ -29,7 +29,7 @@
     height: 400px;
     opacity: 0.9;
     position: relative;
-    width: 100%;
+    max-width: 100%;
 }
 
 .about-us .content {
@@ -38,4 +38,27 @@
 
 .shadow {
     box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15);
+}
+
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        padding: 30px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .about-us {
+        padding-left: 30%;
+        padding-right: 20px;
+    }
+
+    .row-start .img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .about-us {
+        padding-left: 20px;
+    }
 }

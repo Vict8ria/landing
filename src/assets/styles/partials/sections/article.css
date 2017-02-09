@@ -88,6 +88,10 @@ article .h2::before {
 	left: -49px;
 }
 
+.row-start .content::before{
+	left: -49px;
+}
+
 .learn-more-btn {
 	text-transform: uppercase;
 	font-size: 0.875rem;
@@ -130,9 +134,9 @@ article .h2::before {
 	right: 0;
 }
 
-.row-end, .row-start .content::before {
+/*.row-end, .row-start .content::before {
 	left: -49px;	
-}
+}*/
 
 .steps::before {
 	counter-increment: blocks;
@@ -157,4 +161,37 @@ article .h2::before {
 
 .steps:nth-child(odd)::after {
 	left: 65px;
+}
+
+@media only screen and (max-width: 720px) {
+
+    .row-start {
+    	flex-direction: column;
+    	margin: 70px 0;
+    }
+
+	.row-end .img {
+		margin: 60px auto 0;
+		width: 100%;
+	}
+
+    .row-end {
+		flex-direction: column;
+		padding-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	.row-rev {
+		flex-direction: column;
+		padding-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	.row-rev .img {
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	
 }

@@ -43,3 +43,13 @@
 .dev {
 	font-weight: 400; 
 }
+
+@media only screen and (max-width: 720px) {
+	.footer__item {
+		flex-direction: column;
+	}
+
+	.footer__item * {
+		margin: 10px 0;
+	}
+}
