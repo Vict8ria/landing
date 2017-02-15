@@ -1,0 +1,49 @@
+.about {
+    &__wrapper {
+        max-width: 960px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        @media only screen and (max-width: 1200px) {
+            padding: 30px;
+            flex-direction: column;
+        }
+    }
+    &__article {
+        order: 2;
+        margin-left: 100px;
+        @media only screen and (max-width: 720px) {
+            margin-left: 30%;
+        }
+    }
+    &__img {
+        order: 1;
+        max-width: 590px;
+        @media only screen and (max-width: 720px) {
+            max-width: 100%;
+        }
+    }
+}
+
+/*.about::after {
+    color: #fff;
+    content: "about us";
+    font-size: 10.5rem;
+    left: -400px;
+    letter-spacing: 0.7rem;
+    opacity: 0.2;
+    text-transform: uppercase;
+    top: 110px;
+    z-index: 1;
+}*/
+
+
+
+
+
+
+
+

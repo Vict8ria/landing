@@ -4,8 +4,9 @@ footer {
 	align-items: center;
 	color: #434343;
 	background-image: url(../img/wood/wood_2.png);
-	padding: 20px 0;
+	background-repeat: no-repeat;
 	background-position: 0% 50%;
+	padding: 20px 0;
 	position: relative;
 	z-index: 1;
 	&::after {
@@ -29,12 +30,12 @@ footer {
 		text-transform: uppercase;
 		font-weight: 400;
 	}
-	.logo--link {
+	.logo__link {
 		color: #fff;
 	}
 	.dev {
 		font-weight: 400; 
-		&--link {
+		&__link {
 			color: #7d7d7d;
 			text-decoration: none;
 		}

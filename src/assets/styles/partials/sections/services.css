@@ -1,0 +1,95 @@
+.services {
+	&__wrapper {
+		padding: 0 20px;
+	}
+	&__block {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
+		padding-top: 200px;
+		margin-bottom: 100px;
+		@media only screen and (max-width: 1200px) {
+			flex-direction: column;
+			padding-top: 80px;
+			margin-bottom: 80px;
+		}
+		&-left {
+			justify-content: flex-start;
+			.services__text {
+				order: 2;
+				text-align: right;
+			}
+			.services__img {
+				order: 1;
+			}
+			.image-text {
+				left: -230px;
+			}
+		}
+		&-right {
+			justify-content: flex-end;
+			.image-text {
+				left: 230px;
+			}
+		}
+	}
+	&__text {
+		max-width: 350px;
+		margin: -40px 80px 0;
+		position: relative;
+		@media only screen and (max-width: 1200px) {
+			margin: 40px 0 90px;
+		}
+	}
+	.steps {
+		&::before {
+			counter-increment: blocks;
+			content: "0" counter(blocks);
+			font-size: 2.25rem;
+			position: absolute;
+			letter-spacing: 0.2rem;
+			bottom: -90px;
+		}
+		&:nth-child(odd)::before {
+			left: -120px;
+		}
+		&:nth-child(even)::before {
+			right: 0;
+		}
+		&::after {
+			content: ".";
+			font-size: 2.25rem;
+			position: absolute;
+			color: #bea67c;
+			bottom: -90px;
+		}
+		&:nth-child(odd)::after {
+			left: -75px;
+		}
+		&:nth-child(even)::after {
+
+		}
+	}
+	&__img {
+		position: relative;
+		.image-text {
+			position: absolute;
+			text-transform: uppercase;
+			color: #fff;
+			top: 100px;
+			font-size: 10.5rem;
+			letter-spacing: 0.7rem;
+			opacity: 0.2;
+			z-index: 1;
+		}
+	}
+	&__img {
+		max-width: 615px;
+		max-height: 400px;
+		@media only screen and (max-width: 1200px) {
+			max-width: 100%;
+		}
+	}
+}
+

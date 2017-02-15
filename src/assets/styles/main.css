@@ -1,14 +1,12 @@
 @import 'fonts.css';
 @import 'partials/vendors/normalize.css';
+@import 'partials/vendors/typography.css';
 @import 'partials/sections/menu.css';
-@import 'partials/sections/arrow-small.css';
 @import 'partials/sections/header.css';
-@import 'partials/sections/article.css';
-@import 'partials/sections/furniture.css';
-@import 'partials/sections/decor.css';
+@import 'partials/sections/services.css';
 @import 'partials/sections/video.css';
-@import 'partials/sections/watch-video.css';
-@import 'partials/sections/about-us.css';
+@import 'partials/sections/promo.css';
+@import 'partials/sections/about.css';
 @import 'partials/sections/footer.css';
 
 
@@ -35,26 +33,6 @@ ul, li {
 	padding: 0;
 }
 
-p { 
-    font-size: 0.9375rem;
-    color: #464646;
-    font-weight: 400;
-}
-
-.wrapper {
-	max-width: 1200px;
-	margin: 0 auto;
-	z-index: -996;
-}
-
-@media only screen and (max-width: 1200px) {
-	.wrapper {padding: 30px;}
-}
-
-@media only screen and (max-width: 720px) {
-	
-}
-
-@media only screen and (max-width: 480px) {
-	.wrapper {padding: 30px;}
+* {
+	box-sizing: border-box;
 }

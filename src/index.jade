@@ -5,99 +5,108 @@ html
 		title Wooder
 		link(href='assets/css/main.css', rel='stylesheet')
 	body
-		header
-			div.header-wrapper
-				div.header-bg-right
-				div.header-bg-left
-				div.toggler.menu-toggler
-				div.section-number
-				div.header
-					div.header-top
-						div.logo.logo__header 
-							a(href="#") Wooder
-
-						nav
-							ul.nav
-								li.nav-item
-									a.nav-link(href="#home") Home
-								li.nav-item
-									a.nav-link(href="#products") Products
-								li.nav-item
-									a.nav-link(href="#about") About
-						
-					div.info
-					div.lang en
-						
-				div.promo
-					p Wooder
-					a.btn-white(href="#") Learn more
-							div.arrow-small.arrow-small__header
-				div.scroll
-					div.mouse
-					div.arrow
-
+		header.header
+			.background.background-letter1 W
+			.background.background-letter2 F
+			.background.background-text Furniture  &  decor
+			.header-bg-left
+			.header-bg-right
+			.header-top
+				.logo.logo-header
+					a.logo__link(href="") Wooder
+				nav
+					ul.nav
+						li.nav-item
+							a.nav-link.active(href="#home") Home
+						li.nav-item
+							a.nav-link(href="#products") Products
+						li.nav-item
+							a.nav-link(href="#about") About
+			.info-lang
+				.info i
+				.lang en
+			.header-promo
+				h1.promo-name Wooder
+				button.btn.btn-rectangle.btn__header(href="#") Learn more
+					div.arrow-small.arrow-small__header
+				.header-scroll
+					.scroll Scroll
+					.arrow-small.scroll__arrow-small
+				.slider
+					.slider-btn 
+						h2.slider__number 01
+						span.btn__slider.active-btn
+						span.btn__slider
+						span.btn__slider
+						span.btn__slider
+			
+			
 		main
-			div.wrapper
-				article.row-end.steps
-					section.furniture
-						h2.h2 Furniture
-						p.content 
-							| Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
-						a.learn-more-btn Learn more 
-							div.arrow-small
-					section.img
-						figure.furniture-img
-				article.row-rev.steps
-					section.decor
-						h2.h2 Decor
-						p.content 
-							| We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable
-						a.learn-more-btn Learn more 
-							div.arrow-small
-					section.img
-						figure.decor-img
-				div.video-set
-					div.wrapper
-						div.video-set__header
-							h2.h2 Wooder &#8212; is quality     
-							p.video-set__content
-								| We create unique design objects made of rare wood, specially under the order. Look at the short video about our work.
-						div.video-set__items
-							div.video-set__item
-								div.round.video-1 
-								p Innovative design
-							div.video-set__item
-								div.round.video-2 
-								p High-level skills
-							div.video-set__item
-								div.round.video-3 
-								p Quality products
-
-			div.watch-video
-				div.watch-video__item
-					div.content-video
-						h2.h2 We do the design of any complexity
-						p.
-							This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global quality standards. And we are doing work with love.
-						a.btn-white.btn__watch-video(href="#") Watch video
-			div.wrapper
-				article.row-start
-					section.img.shadow
-						figure.about-us-img
-					section.about-us
-						h2.h2 About us
-						p.content 
+			section.services
+				.wrapper.services__wrapper
+					article.services__block.services__block-right
+						section.services__text.steps
+							h2.header-line-left Furniture
+							p.content.content-line-left
+								| Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
+							a.btn Learn more 
+								.arrow-small.arrow-small-brown
+						section.services__img
+							.image-text Furniture
+							img.services__img.shadow(src="assets/img/wood/table-3.jpg")
+					article.services__block.services__block-left
+						section.services__text.steps
+							h2.header-line-right Decor
+							p.content.content-line-right
+								| We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable
+							a.btn Learn more 
+								.arrow-small.arrow-small-brown
+						section.services__img
+							.image-text Decor
+							img.services__img.shadow(src="assets/img/wood/decor.png")
+			section.video
+				.wrapper.video__wrapper
+					.video__header
+						h2.bottom-line Wooder &#8212; is quality     
+						p.content
+							| We create unique design objects made of rare wood, specially under the order. Look at the short video about our work.
+					.video-list
+						.video-list__item
+							.video__img
+								img.hover(src="assets/img/wood/table.jpg")
+							div.video__name Innovative design
+						.video-list__item
+							.video__img
+								img.hover(src="assets/img/wood/chair.jpg")
+							div.video__name High-level skills
+						.video-list__item
+							.video__img
+								img.hover(src="assets/img/wood/table-2.jpg")
+							div.video__name Quality products
+			section.promo
+				.wrapper.promo__wrapper
+					.play
+					.promo-text
+						h2.promo__header.header-line-left.header-left-line-white We do the design of any complexity
+						p.content.promo__content.content-line-left
+							| This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global quality standards. And we are doing work with love.
+						button.btn.btn-rectangle Watch video
+			section.about
+				.wrapper.about__wrapper
+					article.about__article
+						h2.about__header.header-line-left About us
+						p.content.about__content.content-line-left
 							| We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class
-						a.learn-more-btn Learn more 
-							div.arrow-small
+						a.btn Learn more 
+							.arrow-small.arrow-small-brown
+					img.about__img.shadow(src="assets/img/about/about-us.jpg")
 
-		footer.footer
-			div.footer__item
-				span &#169; 2016 Wooder
-				div.logo
-					a(href="#") Wooder
-				div.dev Designed by 
-					a(href="#") Viacheslav Olianishyn
+		footer
+			.copyright &#169; 2016 Wooder
+			.logo
+				a.logo__link(href="#") Wooder
+			.dev Designed by 
+				a.dev__link(href="#") Viacheslav Olianishyn
 				
 						
 
