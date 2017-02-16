@@ -12,6 +12,18 @@ html
 			.header-bg-left
 			.header-bg-right
 			.header-top
+				.menu-wrapper
+					input(type='checkbox', id='menu-checkbox')
+					nav(role='navigation')
+						label(for='menu-checkbox',  class='toggle-button', data-open='', data-close='', onclick=true)
+							.menu-block.menu-block_opened
+								ul(class='main-menu')
+									li
+										a.active(href="#") home
+									li
+										a(href="#") about
+									li
+										a(href="#") products
 				.logo.logo-header
 					a.logo__link(href="") Wooder
 				nav
