@@ -178,7 +178,7 @@
 		@media only screen and (max-width: 1000px) {
 			display: none;
 		}
-		&-scroll::after {
+		&::after {
 			width: 20px;
 			height: 30px;
 			left: 17px;
