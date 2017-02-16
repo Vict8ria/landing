@@ -2,6 +2,10 @@
   display: none;
 }
 
+.menu-block {
+	z-index: 1000;
+}
+
 .menu-wrapper {
 	display: none;
 	position: absolute;
@@ -48,12 +52,16 @@
 				text-decoration: none;
 				transition: 1s;
 				text-transform: uppercase;
+				.active {
+					color: #bea67c;
+				}
 				&:hover {
 					color: #bea67c;
 				}
 			}
 		}
 	}
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -63,16 +71,16 @@
 }
 
 #menu-checkbox:checked + nav[role="navigation"] .main-menu {
-	left: -30px;
+	left: -50px;
 }
 
 #menu-checkbox:checked + nav[role="navigation"] .main-menu_opened {
 	  	background-color: transparent;  
 	  }
-#menu-checkbox:checked + nav[role="navigation"] .main-menu::before {
+#menu-checkbox:checked + nav[role="navigation"] .main-menu_opened::before {
 	  		transform: rotate(-45deg) scaleX(1.2);
 	  	}
-#menu-checkbox:checked + nav[role="navigation"] .main-menu::after {
+#menu-checkbox:checked + nav[role="navigation"] .main-menu_opened::after {
 	  		transform: rotate(45deg) scaleX(1.2);
 	  	}
 

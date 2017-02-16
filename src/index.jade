@@ -15,7 +15,7 @@ html
 				.menu-wrapper
 					input(type='checkbox', id='menu-checkbox')
 					nav(role='navigation')
-						label(for='menu-checkbox',  class='toggle-button', data-open='', data-close='', onclick=true)
+						label(for='menu-checkbox',  class='toggle-button', data-open='', data-close='', onclick=no)
 							.menu-block.menu-block_opened
 								ul(class='main-menu')
 									li
@@ -105,13 +105,15 @@ html
 						button.btn.btn-rectangle Watch video
 			section.about
 				.wrapper.about__wrapper
-					article.about__article
-						h2.about__header.header-line-left About us
-						p.content.about__content.content-line-left
-							| We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class
-						a.btn Learn more 
-							.arrow-small.arrow-small-brown
-					img.about__img.shadow(src="assets/img/about/about-us.jpg")
+					section.about-text
+						article.about__article
+							h2.about__header.header-line-left About us
+							p.content.about__content.content-line-left
+								| We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class
+							a.btn Learn more 
+								.arrow-small.arrow-small-brown
+					section.about-img
+						img.about__img.shadow(src="assets/img/about/about-us.jpg")
 
 		footer
 			.copyright &#169; 2016 Wooder
