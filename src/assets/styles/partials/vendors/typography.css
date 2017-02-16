@@ -111,10 +111,9 @@ p {
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
-}
-
-.btn:hover .arrow-small {
-	transform: translateX(4px);
+	&:hover .arrow-small {
+		transform: translateX(4px);
+	}
 }
 
 .shadow {

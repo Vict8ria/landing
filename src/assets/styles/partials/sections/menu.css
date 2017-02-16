@@ -52,16 +52,16 @@
 				text-decoration: none;
 				transition: 1s;
 				text-transform: uppercase;
-				.active {
-					color: #bea67c;
-				}
 				&:hover {
 					color: #bea67c;
 				}
 			}
 		}
+		.active {
+			color: #bea67c;
+		}
 	}
-
+	
 }
 
 @media only screen and (max-width: 1000px) {

@@ -53,7 +53,7 @@
 			font-size: 2.25rem;
 			position: absolute;
 			letter-spacing: 0.2rem;
-			bottom: -90px;
+			bottom: 0;
 		}
 		&:nth-child(odd)::before {
 			left: 90px;
@@ -66,7 +66,7 @@
 			font-size: 2.25rem;
 			position: absolute;
 			color: #bea67c;
-			bottom: -90px;
+			bottom: 0;
 		}
 		&:nth-child(odd)::after {
 			left: 130px;

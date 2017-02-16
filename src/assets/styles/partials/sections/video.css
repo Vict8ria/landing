@@ -54,12 +54,16 @@
 			border-width: 12px 0 12px 24px;
 			border-color: transparent transparent transparent #fff;
 		}
-		&:hover::before .hover {
+		&:hover::before {
+			top: 84px;
+			margin-left: 84px;
 			width: 76px;
 			height: 76px;
 		}
-		&:hover::after .hover {
-			border-width: 16px 0 16px 28px;
+		&:hover::after {
+			top: 109px;
+			margin-left: -130px;
+			border-width: 14px 0 14px 28px;
 		}
 		&:hover .hover {
 			opacity: 0.5;
