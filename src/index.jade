@@ -4,29 +4,22 @@ html
 		meta(charset="utf-8")
 		title Wooder
 		link(href='assets/css/main.css', rel='stylesheet')
+		meta(name="viewport", content="width=device-width, initial-scale=1")
 	body
 		header.header
-			.background.background-letter1 W
-			.background.background-letter2 F
-			.background.background-text Furniture  &  decor
-			.header-bg-left
-			.header-bg-right
+			.backgrounds
+				.background.background-letter1 W
+				.background.background-letter2 F
+				.background.background-text Furniture  &  decor
+				.background-img.background-img-left
+				.background-img.background-img-right
 			.header-top
-				.menu-wrapper
-					input(type='checkbox', id='menu-checkbox')
-					nav(role='navigation')
-						label(for='menu-checkbox',  class='toggle-button', data-open='', data-close='', onclick=no)
-							.menu-block.menu-block_opened
-								ul(class='main-menu')
-									li
-										a.active(href="#") home
-									li
-										a(href="#") about
-									li
-										a(href="#") products
 				.logo.logo-header
-					a.logo__link(href="") Wooder
+					a.logo__link(href="#") Wooder
 				nav
+					input(type='checkbox', id='menu', class="toggle-checkbox")
+					label(for='menu',  class='toggle-button')
+						span
 					ul.nav
 						li.nav-item
 							a.nav-link.active(href="#home") Home
@@ -36,14 +29,22 @@ html
 							a.nav-link(href="#about") About
 			.info-lang
 				.info i
-				.lang en
+				.lang 
+					ul.lang-menu
+						li 	
+							a(href="#") en
+							ul.lang-submenu
+								li 
+									a(href="#") en
+								li 
+									a(href="#") ru
 			.header-promo
 				h1.promo-name Wooder
-				button.btn.btn-rectangle.btn__header(href="#") Learn more
-					div.arrow-small.arrow-small__header
+				a.btn.btn-rectangle.btn-arrow.arrow-light.btn-header Learn more
+					.arrow
 				.header-scroll
 					.scroll Scroll
-					.arrow-small.scroll__arrow-small
+					.arrow.scroll__arrow-small
 				.slider
 					.slider-btn 
 						h2.slider__number 01
@@ -61,8 +62,8 @@ html
 							h2.header-line-left Furniture
 							p.content.content-line-left
 								| Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
-							a.btn Learn more 
-								.arrow-small.arrow-small-brown
+							a.btn.btn-hover.btn-arrow Learn more 
+								.arrow.arrow-main
 						section.services__img
 							.image-text Furniture
 							img.services__img.shadow(src="assets/img/wood/table-3.jpg")
@@ -71,38 +72,47 @@ html
 							h2.header-line-right Decor
 							p.content.content-line-right
 								| We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable
-							a.btn Learn more 
-								.arrow-small.arrow-small-brown
+							a.btn.btn-hover.btn-arrow Learn more 
+								.arrow.arrow-main
 						section.services__img
 							.image-text Decor
 							img.services__img.shadow(src="assets/img/wood/decor.png")
 			section.video
-				.wrapper.video__wrapper
-					.video__header
+				.wrapper
+					.video-header
 						h2.bottom-line Wooder &#8212; is quality     
 						p.content
 							| We create unique design objects made of rare wood, specially under the order. Look at the short video about our work.
 					.video-list
 						.video-list__item
-							.video__img
-								img.hover(src="assets/img/wood/table.jpg")
-							div.video__name Innovative design
+							.preview__wrapper
+								a.video-link(href="#")
+									.preview.video-play 
+										img.video-img(src="assets/img/wood/table.jpg")
+										.overlay
+							.video__name Innovative design
 						.video-list__item
-							.video__img
-								img.hover(src="assets/img/wood/chair.jpg")
-							div.video__name High-level skills
+							.preview__wrapper
+								a.video-link(href="#")
+									.preview.video-play 
+										img.video-img(src="assets/img/wood/chair.jpg")
+										.overlay
+							.video__name High-level skills
 						.video-list__item
-							.video__img
-								img.hover(src="assets/img/wood/table-2.jpg")
-							div.video__name Quality products
+							.preview__wrapper
+								a.video-link(href="#")
+									.preview.video-play 
+										img.video-img(src="assets/img/wood/table-2.jpg")
+										.overlay
+							.video__name Quality products
 			section.promo
 				.wrapper.promo__wrapper
 					.play
 					.promo-text
-						h2.promo__header.header-line-left.header-left-line-white We do the design of any complexity
+						h2.promo__header.header-line-left.header-left-line-white We do the design of any comple&shyxi&shyty
 						p.content.promo__content.content-line-left
 							| This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global quality standards. And we are doing work with love.
-						button.btn.btn-rectangle Watch video
+						button.btn.btn__promo.btn-rectangle Watch video
 			section.about
 				.wrapper.about__wrapper
 					section.about-text
@@ -110,8 +120,8 @@ html
 							h2.about__header.header-line-left About us
 							p.content.about__content.content-line-left
 								| We are a team of professionals in the wood processing and the creation of wooden furniture of the highest class
-							a.btn Learn more 
-								.arrow-small.arrow-small-brown
+							a.btn.btn-hover.btn-arrow Learn more 
+								.arrow.arrow-main
 					section.about-img
 						img.about__img.shadow(src="assets/img/about/about-us.jpg")
 
@@ -121,6 +131,7 @@ html
 				a.logo__link(href="#") Wooder
 			.dev Designed by 
 				a.dev__link(href="#") Viacheslav Olianishyn
+
 				
 						
 

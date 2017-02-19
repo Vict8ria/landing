@@ -3,25 +3,31 @@
 	content: "";
 }
 
-.arrow-small {
+.arrow {
 	display: inline-block;
 	position: relative;
 	top: 2px;
 	left: 8px;
-/*	width: 3em;*/
 	height: 1em;
 }
 
-.arrow-small::before, .arrow-small::after {
+.arrow::before, .arrow::after {
 	border-width: .1em;
+}
+
+.arrow-light::before, .arrow-light::after {
+	border-color: #fff;
+}
+
+.arrow-dark::before, .arrow-dark::after {
 	border-color: #000;
 }
 
-.arrow-small-brown::before, .arrow-small-brown::after {
+.arrow-main::before, .arrow-main::after {
 	border-color: #bea67c;
 }
 
-.arrow-small::after {
+.arrow::after {
 	width: .3em;
 	height: .3em;
 	top: .36em;
@@ -31,17 +37,29 @@
 	transform: rotate(45deg);
 }
 
-.arrow-small::before {
+.arrow::before {
 	top: .5em;
 	width: 2.4em;
 	border-top-style: solid;
 }
 
+h1 {
+	text-transform: uppercase;
+	font-size: 6.25em;
+	letter-spacing: 1.1rem;
+	@media only screen and (max-width: 720px) {
+		font-size: 4rem;
+	}
+}
+
 h2 {
-	font-size: 3rem;
+	font-size: 3em;
 	text-transform: uppercase;
 	position: relative;
 	letter-spacing: 0.3rem;
+	@media only screen and (max-width: 720px) {
+		font-size: 2rem;
+	}
 }
 
 
@@ -67,6 +85,11 @@ p {
 .wrapper {
 	max-width: 1200px;
 	margin: auto;
+	@media only screen and (max-width: 720px) {
+		padding-left: 20px;
+		padding-right: 20px;
+
+	}
 }
 
 .content-line {
@@ -111,31 +134,50 @@ p {
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
-	&:hover .arrow-small {
-		transform: translateX(4px);
+	&-hover {
+		transition: color 2s, transform 2s;
+		&:hover {
+			color: #bea67c;
+		}
 	}
-}
-
-.shadow {
-	box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15);
 }
 
 .btn-rectangle {
 	border: 1px solid #fff;
 	background-color: transparent;
-	padding: 15px 90px 15px 60px;
+	padding: 15px 60px;
 	color: #fff;
 	text-decoration: none;
-	display: block;
-	transition: 0.4s;
+	transition: background-color 2s, color 2s, opacity 2s;
+	@media only screen and (max-width: 480px) {
+		padding: 15px 20px;
+	}
 	&:hover {
 		background-color:#fff;
 		color: #000;
 		opacity: 0.8;
 	}
-	&:hover .arrow-small::before, &:hover .arrow-small::after {
-		border-color: #000;
+}
+
+.btn-arrow {
+	&:hover .arrow {
+		animation: slip 2s;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 999;
 	}
+}
+
+@keyframes slip {
+	from, to {
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+}
+
+.shadow {
+	box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.15);
 }
 
 .logo {

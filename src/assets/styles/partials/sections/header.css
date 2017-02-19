@@ -1,73 +1,73 @@
 .header {
-	height: 1000px;
-	@media only screen and (max-width: 1000px) {
-		height: 700px;
-	}
+	height: 100vh;
 	.background {
 		text-transform: uppercase;
 		color: #a9946e;
 		font-size: 24.72rem;
 		position: absolute;
 		opacity: 0.1;
-		@media only screen and (max-width: 1000px) {
-			display: none;
-		}
 		&-letter1 {
 			top: 187px;
 			right: -190px;
 		}
 		&-letter2 {
-			top: 820px;
+			top: 78vh;
 			left: 222px;
+			@media only screen and (max-width: 1000px) {
+				top: 500px;
+				left: 10%;
+			}
 		}
 		&-text {
 			font-size: 1rem;
 			top: 353px;
 			right: 150px;
 			transform: rotate(90deg);
+			@media only screen and (max-width: 1000px) {
+				top: 220px;
+				right: 10%;
+				transform: rotate(0deg);
+			}
 		}
-	}
-	&-bg-left {
-		position: absolute;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 20% 50%;
-		height: 1000px;
-		width: 56%;
-		top: 0;
-		left: 0;
-		background-image: url(../img/wood/wood_2.png);
-		z-index: -2;
-		@media only screen and (max-width: 1000px) {
-			width: 100%;
-			height: 700px;
+		&-img {
+			position: absolute;
+			background-size: cover;
+			background-repeat: no-repeat;
+			&-left {
+				background-position: 20% 50%;
+				height: 100vh;
+				width: 56%;
+				top: 0;
+				left: 0;
+				background-image: url(../img/wood/wood_2.png);
+				z-index: -2;
+				@media only screen and (max-width: 1000px) {
+					width: 100%;
+					height: 700px;
+				}
+			}
+			&-right {
+				background-position: 50% 50%;
+				height: 105vh;
+				width: 44%;
+				top: 0;
+				right: 0;
+				background-image: url(../img/wood/wood.png);
+				z-index: -2;
+				@media only screen and (max-width: 1000px) {
+					display: none;
+				}
+			}
+			&-left::after, &-right::after {
+				background-color: #000;
+				height: 100%;
+				width: 100%;
+				opacity: 0.9;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
 		}
-	}
-
-	&-bg-right {
-		position: absolute;
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		height: 1042px;
-		width: 44%;
-		top: 0;
-		right: 0;
-		background-image: url(../img/wood/wood.png);
-		z-index: -2;
-		@media only screen and (max-width: 1000px) {
-			display: none;
-		}
-	}
-
-	&-bg-left::after, &-bg-right::after {
-		background-color: #000;
-		height: 100%;
-		width: 100%;
-		opacity: 0.9;
-		top: 0;
-		left: 0;
-		z-index: -1;
 	}
 	&-top {
 		max-width: 1200px;
@@ -78,41 +78,35 @@
 		justify-content: flex-start;
 		align-items: center;
 		.logo {
+			&__link {
+				@media only screen and (max-width: 480px) {
+					font-size: 1.6rem;
+				}
+				&:before {
+					@media only screen and (max-width: 480px) {
+						top: 14px;
+						left: 36px;
+						width: 44px;
+						outline-width: 2px;
+					}
+				}	
+			}
 			&-header {
 				margin-right: 60px;
 			}
 		}
-		.nav {
-			&-item {
-				display: inline-block;
-				margin-right: 80px;
-				@media only screen and (max-width: 1000px) {
-					display: none;
-				}
-			}
-			&-link {
-				color: #818181;
-				text-transform: uppercase;
-				text-decoration: none;
-				font-size: 0.9375rem;
-				display: block;
-				transition: 1s;
-				&:hover {
-					color: #bea67c;
-				}
-			}
-		}
-		.active {
-			color: #bea67c;
-		}
 	}
 	.info-lang {
 		position: absolute;
-		top: 25px;
+		top: 15px;
 		right: 30px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		@media only screen and (max-width: 480px) {
+			top: 10px;
+			right: 10px;
+		}
 	}
 	.info {
 		border: 1px solid #fff;
@@ -124,22 +118,28 @@
 		padding-left: 8px;
 		color: #fff;
 		cursor: pointer;
-		margin-right: 20px
+		margin-left: 20px;
+		@media only screen and (max-width: 480px) {
+			margin-left: 10px;
+		}
 	}
 	.lang {
 		color: #fff;
-		margin-right: 30px;
+		margin-left: 15px;
 		text-transform: uppercase;
 		font-size: 0.9375rem;
 		opacity: 0.5;
 		cursor: pointer;
 		vertical-align: center;
+		position: relative;
+		@media only screen and (max-width: 480px) {
+			margin-left: 0;
+		}
 		&::after {
-			position: relative;
 			border: 3px solid transparent;
 			border-top: 5px solid #818181;
-			top: 12px;
-			left: 5px;
+			top: 15px;
+			right: 0;
 			width: 0;
 			height: 0;
 		}
@@ -155,28 +155,22 @@
 		.promo-name {
 			margin-bottom: 20px;
 			color: #bea67c;
-			text-transform: uppercase;
-			font-size: 6.25em;
-			letter-spacing: 1.1rem;
 			font-weight: 700;
 			@media only screen and (max-width: 1000px) {
 				text-align: center;
-				font-size: 4.5em;
+			}
+			@media only screen and (max-width: 480px) {
+				font-size: 2.6rem;
 			}
 		}
 	}
-	.btn__header {
-		@media only screen and (max-width: 1000px) {
-			margin: 50px auto 0;
-		}
-	}
-	.arrow-small__header::before, .arrow-small__header::after {
-		border-color: #fff;
-	}
+	
 	&-scroll {
 		position: relative;
+		width: 50px;
 		@media only screen and (max-width: 1000px) {
-			display: none;
+			margin: 0 auto;
+			display: block;
 		}
 		&::after {
 			width: 20px;
@@ -194,6 +188,9 @@
 		font-size: 0.875em;
 		transform: rotate(90deg);
 		opacity: 0.1;
+		@media only screen and (max-width: 1000px) {
+			display: none;
+		}
 		&__arrow-small {
 			position: absolute;
 			top: 140px;
@@ -208,16 +205,23 @@
 	}
 }
 
+.btn-header {
+	padding-right: 100px;
+	@media only screen and (max-width: 1000px) {
+		text-align: center;
+	}
+}
 
 .slider {
-	position: absolute;
-	left: 5%;
-	top: -35px;
+	position: fixed;
+	left: 12%;
+	top: 200px;
 	width: 100px;
 	height: 100px;
 	padding-left: 40px;
+	z-index: 999;
 	@media only screen and (max-width: 1000px) {
-		display: none;
+		left: 6%;
 	}
 	&-btn {
 		position: relative;

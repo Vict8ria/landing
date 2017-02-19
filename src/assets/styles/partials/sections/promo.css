@@ -3,7 +3,7 @@
 	background-color: #000;
 	position: relative;
 	z-index: 1;
-	padding: 0 calc(2% + 40px);
+	padding: 0 20px;
 	@media only screen and (max-width: 720px) {
 		padding: 0 calc(2% + 20px);
 	}
@@ -56,12 +56,7 @@
 	.header-left-line-white::before {
 		outline-color: #fff;
 	}
-	.btn {
-		padding: 15px 60px;
-		cursor: pointer;
-		border: 1px solid #fff;
-		background-color: transparent;
-		color: #fff;
+	.btn__promo {
 		&::before {
 			position: relative;
 			width: 18px;
@@ -70,6 +65,7 @@
 			border: 2px solid #fff;
 			margin-right: 10px;
 			border-radius: 50% 50%;
+			transition: border-color 2s;
 		}
 		&::after {
 			top: 21px;
@@ -78,7 +74,17 @@
 			height: 0;
 			border-style: solid;
 			border-width: 3px 0 3px 6px;
-			border-color: transparent transparent transparent #fff;	
+			border-color: transparent transparent transparent #fff;
+			transition: border-color 2s;	
+			@media only screen and (max-width: 480px) {
+				left: 29px;
+			}
+		}
+		&:hover::before {
+			border-color: #000;
+		}
+		&:hover::after {
+			border-color: transparent transparent transparent #000;
 		}
 	}
 	.play {
@@ -102,8 +108,6 @@
 		}
 	}
 }
-
-
 
 
 

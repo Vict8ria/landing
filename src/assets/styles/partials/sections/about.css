@@ -8,7 +8,7 @@
         margin-top: 150px;
         margin-bottom: 150px;
         @media only screen and (max-width: 1200px) {
-            padding: 30px;
+            padding: 20px;
             flex-direction: column;
         }
     }

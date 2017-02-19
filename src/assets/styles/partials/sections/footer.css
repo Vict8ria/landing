@@ -38,6 +38,10 @@ footer {
 		&__link {
 			color: #7d7d7d;
 			text-decoration: none;
+			transition: color 2s;
+			&:hover {
+				color: #bea67c;
+			}
 		}
 	}
 }
