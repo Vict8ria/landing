@@ -6,59 +6,59 @@ html
 		link(href='assets/css/main.css', rel='stylesheet')
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 	body
-		header.header
+		header.header(id="home")
 			.backgrounds
-				.background.background-letter1 W
-				.background.background-letter2 F
+				.background.background-letter-1 W
+				.background.background-letter-2 F
 				.background.background-text Furniture  &  decor
 				.background-img.background-img-left
 				.background-img.background-img-right
 			.header-top
 				.logo.logo-header
-					a.logo__link(href="#") Wooder
+					a.logo__link.logo-header__link(href="#products") Wooder
 				nav
 					input(type='checkbox', id='menu', class="toggle-checkbox")
 					label(for='menu',  class='toggle-button')
 						span
-					ul.nav
-						li.nav-item
-							a.nav-link.active(href="#home") Home
-						li.nav-item
-							a.nav-link(href="#products") Products
-						li.nav-item
-							a.nav-link(href="#about") About
-			.info-lang
-				.info i
-				.lang 
-					ul.lang-menu
-						li 	
-							a(href="#") en
-							ul.lang-submenu
-								li 
-									a(href="#") en
-								li 
-									a(href="#") ru
+					ul.menu
+						li.menu-item
+							a.menu__link.active(href="#home") Home
+						li.menu-item
+							a.menu__link(href="#products") Products
+						li.menu-item
+							a.menu__link(href="#about") About
+						li.menu-item.menu-item-lang 
+							span.info-language
+								a.info(href="#") i
+									span.info-text info
+								span.language
+									ul.language-list.language-menu
+										li 	
+											a.language-list.language-menu__link(href="#") en
+											ul.language-submenu
+												li 
+													a.language-submenu__link(href="#") en
+												li 
+													a.language-submenu__link(href="#") ru
 			.header-promo
 				h1.promo-name Wooder
-				a.btn.btn-rectangle.btn-arrow.arrow-light.btn-header Learn more
+				a.btn.btn-rectangle.btn-arrow.arrow-light.btn-header(href="#products") Learn more
 					.arrow
-				.header-scroll
-					.scroll Scroll
-					.arrow.scroll__arrow-small
+				.scroll
+					.scroll-text Scroll
+					.arrow.scroll__arrow
 				.slider
-					.slider-btn 
-						h2.slider__number 01
-						span.btn__slider.active-btn
-						span.btn__slider
-						span.btn__slider
-						span.btn__slider
-			
-			
+					.slider-btns 
+						h2.slider__number 00
+						a.slider-btn(href="#products")
+						a.slider-btn(href="#video")
+						a.slider-btn(href="#promo")
+						a.slider-btn(href="#about")
 		main
-			section.services
+			section.services.block(id="products")
 				.wrapper.services__wrapper
-					article.services__block.services__block-right.steps
-						section.services__text
+					article.services__block.services__block-right
+						section.services__text.steps
 							h2.header-line-left Furniture
 							p.content.content-line-left
 								| Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
@@ -67,8 +67,8 @@ html
 						section.services__img
 							.image-text Furniture
 							img.services__img.shadow(src="assets/img/wood/table-3.jpg")
-					article.services__block.services__block-left.steps
-						section.services__text
+					article.services__block.services__block-left
+						section.services__text.steps
 							h2.header-line-right Decor
 							p.content.content-line-right
 								| We make all types of wooden decor as per design given by Architect,Interior designer, contractor which is suitable
@@ -77,7 +77,7 @@ html
 						section.services__img
 							.image-text Decor
 							img.services__img.shadow(src="assets/img/wood/decor.png")
-			section.video
+			section.video.block(id="video")
 				.wrapper
 					.video-header
 						h2.bottom-line Wooder &#8212; is quality     
@@ -86,34 +86,34 @@ html
 					.video-list
 						.video-list__item
 							.preview__wrapper
-								a.video-link(href="#")
+								a.video-link.popup(href="https://www.youtube.com/watch?v=TwFmVEZ_-aY")
 									.preview.video-play 
 										img.video-img(src="assets/img/wood/table.jpg")
 										.overlay
 							.video__name Innovative design
 						.video-list__item
 							.preview__wrapper
-								a.video-link(href="#")
+								a.video-link.popup(href="https://www.youtube.com/watch?v=6p0hrma8t68")
 									.preview.video-play 
 										img.video-img(src="assets/img/wood/chair.jpg")
 										.overlay
 							.video__name High-level skills
 						.video-list__item
 							.preview__wrapper
-								a.video-link(href="#")
+								a.video-link.popup(href="https://www.youtube.com/watch?v=g9kvU2EOhgk")
 									.preview.video-play 
 										img.video-img(src="assets/img/wood/table-2.jpg")
 										.overlay
 							.video__name Quality products
-			section.promo
+			section.promo.block(id="promo")
 				.wrapper.promo__wrapper
 					.play
 					.promo-text
 						h2.promo__header.header-line-left.header-left-line-white We do the design of any comple&shyxi&shyty
 						p.content.promo__content.content-line-left
 							| This is a team of professionals that make the furniture and wood décor high standard. Creating modern designs. Adhering to the global quality standards. And we are doing work with love.
-						button.btn.btn__promo.btn-rectangle Watch video
-			section.about
+						button.btn.btn__promo.btn-rectangle.popup(href="https://www.youtube.com/watch?v=CzekJFBrkTM") Watch video
+			section.about.block(id="about")
 				.wrapper.about__wrapper
 					section.about-text
 						article.about__article
@@ -131,6 +131,40 @@ html
 				a.logo__link(href="#") Wooder
 			.dev Designed by 
 				a.dev__link(href="#") Viacheslav Olianishyn
+		script(src="assets/js/jquery-3.1.1.min.js")			
+		script(src="assets/js/script.js")
+		script(src="assets/js/jquery-magnific-popup.js")
+		script.
+			$(document).ready(function() {
+				$('.popup').magnificPopup({
+				  type: 'iframe',
+				  iframe: {
+				    patterns: {
+				      dailymotion: {
+				       
+				        index: 'youtube.com',
+				        
+				        id: function(url) {        
+				            var m = url.match(/^.+youtube.com\/(video|hub)\/([^_]+)[^#]*(=([^_&]+))?/);
+				            if (m !== null) {
+				                if(m[4] !== undefined) {
+				                  
+				                    return m[4];
+				                }
+				                return m[2];
+				            }
+				            return null;
+				        },
+				        
+				        src: 'https://www.youtube.com/%id%'
+				        
+				      }
+				    }
+				  }
+				  
+				  
+				});
+			});
 
 				
 						

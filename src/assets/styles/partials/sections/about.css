@@ -5,10 +5,11 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        margin-top: 150px;
-        margin-bottom: 150px;
+        padding-top: 200px;
+        margin-bottom: 200px;
         @media only screen and (max-width: 1200px) {
-            padding: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
             flex-direction: column;
         }
     }
@@ -32,19 +33,6 @@
         }
     }
 }
-
-/*.about::after {
-    color: #fff;
-    content: "about us";
-    font-size: 10.5rem;
-    left: -400px;
-    letter-spacing: 0.7rem;
-    opacity: 0.2;
-    text-transform: uppercase;
-    top: 110px;
-    z-index: 1;
-}*/
-
 
 
 

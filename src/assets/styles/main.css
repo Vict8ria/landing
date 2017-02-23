@@ -1,6 +1,7 @@
 @import 'fonts.css';
 @import 'partials/vendors/normalize.css';
 @import 'partials/vendors/typography.css';
+@import 'partials/vendors/magnific-popup.css';
 @import 'partials/sections/menu.css';
 @import 'partials/sections/header.css';
 @import 'partials/sections/services.css';
@@ -8,7 +9,7 @@
 @import 'partials/sections/promo.css';
 @import 'partials/sections/about.css';
 @import 'partials/sections/footer.css';
-@import 'partials/sections/lang.css';
+
 
 
 html {
@@ -17,6 +18,11 @@ html {
 	font-size: 16px;
 	overflow-x: hidden;
 	background-color: #ffffff;
+}
+
+a:focus,
+button:focus {
+	outline: none;
 }
 
 body {
@@ -36,4 +42,9 @@ ul, li {
 
 * {
 	box-sizing: border-box;
+}
+
+.active {
+	opacity: 1;
+	color: #bea67c;
 }

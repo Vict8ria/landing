@@ -56,10 +56,16 @@
 			bottom: -90px;
 		}
 		&:nth-child(odd)::before {
-			left: 90px;
+			left: -120px;
+			@media only screen and (max-width: 720px) {
+				left: 0;
+			}
 		}
-		&:nth-child(even)::before {
-			right: 90px;
+		&:nth-child(2n + 1)::before {
+			right: -120px;
+			@media only screen and (max-width: 720px) {
+				right: 10px;
+			}
 		}
 		&::after {
 			content: ".";
@@ -69,10 +75,16 @@
 			bottom: -90px;
 		}
 		&:nth-child(odd)::after {
-			left: 130px;
+			left: -80px;
+			@media only screen and (max-width: 720px) {
+				left: 40px;
+			}
 		}
-		&:nth-child(even)::after {
-			right: 85px;
+		&:nth-child(2n + 1)::after {
+			right: -130px;
+			@media only screen and (max-width: 720px) {
+				right: 0;
+			}
 		}
 	}
 	&__img {
