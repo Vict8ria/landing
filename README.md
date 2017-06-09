@@ -12,3 +12,6 @@ __Console commands to run the project:__
 
 1. Install all dependenсies: `npm i`
 2. Run gulp watcher: `gulp`
+
+__Template PSD:__
+* [look here](https://www.behance.net/gallery/33742162/WOODER-Free-PSD-Template)
